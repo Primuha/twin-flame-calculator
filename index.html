@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twin Flame Calculator</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <title>Twin Flame Calculator by DOB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <div class="calculator-container">
-        <h1>Twin Flame Calculator</h1>
-        <div class="input-fields">
-            <div class="input-group">
-                <label for="birthdate1">Your Birthdate:</label>
-                <input type="date" id="birthdate1" required>
+
+<body class="bg-purple-100">
+    <div class="w-full max-w-2xl mx-auto p-6">
+        <h1 class="text-4xl font-bold mb-6">Free Twin Flame Calculator by DOB</h1>
+        <p class="mb-6">If you’re searching for a deeper connection with your partner, a Twin Flame Compatibility Calculator can be a fun and insightful tool to explore your relationship. By inputting your names and birthdates, this calculator analyzes the unique energies and patterns within your lives to determine your compatibility. Although it should be taken lightheartedly, the Twin Flame Calculator by Date of Birth can spark interesting conversations and help couples reflect on their relationship, ultimately deepening their bond and understanding of one another.</p>
+
+        <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+            <h2 class="text-3xl font-bold mb-4">Twin Flame Calculator by Date of Birth</h2>
+            <div class="mb-4">
+                <label for="your-name" class="block text-lg mb-2">Your Name:</label>
+                <input type="text" id="your-name" class="form-input w-full border-2 border-gray-300 p-2 rounded">
             </div>
-            <div class="input-group">
-                <label for="birthdate2">Twin Flame's Birthdate:</label>
-                <input type="date" id="birthdate2" required>
+            <div class="mb-4">
+                <label for="your-dob" class="block text-lg mb-2">Your Date of Birth:</label>
+                <input type="text" id="your-dob" placeholder="dd/mm/yyyy" class="form-input w-full border-2 border-gray-300 p-2 rounded">
             </div>
+            <div class="mb-6">
+                <label for="partner-name" class="block text-lg mb-2">Partner's Name:</label>
+                <input type="text" id="partner-name" class="form-input w-full border-2 border-gray-300 p-2 rounded">
+            </div>
+            <div class="mb-6">
+                <label for="partner-dob" class="block text-lg mb-2">Partner's Date of Birth:</label>
+                <input type="text" id="partner-dob" placeholder="dd/mm/yyyy" class="form-input w-full border-2 border-gray-300 p-2 rounded">
+            </div>
+            <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Calculate</button>
         </div>
-        <button onclick="calculateCompatibility()">Calculate</button>
-        <div id="result"></div>
     </div>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
+
 </html>
