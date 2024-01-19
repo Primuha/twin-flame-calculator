@@ -1,22 +1,20 @@
-function calculateCompatibility() {
-    const birthdate1 = document.getElementById('birthdate1').value;
-    const birthdate2 = document.getElementById('birthdate2').value;
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('calculate').addEventListener('click', function () {
+        var yourName = document.getElementById('your-name').value;
+        var yourDob = document.getElementById('your-dob').value;
+        var partnerName = document.getElementById('partner-name').value;
+        var partnerDob = document.getElementById('partner-dob').value;
 
-    if (!birthdate1 || !birthdate2) {
-        alert("Please enter both birthdates.");
-        return;
-    }
+        // Simple validation
+        if (!yourName || !yourDob || !partnerName || !partnerDob) {
+            alert('Please fill out all fields.');
+            return;
+        }
 
-    const compatibility = calculateNumerologyCompatibility(birthdate1, birthdate2);
-    document.getElementById('result').innerText = `Compatibility Score: ${compatibility}%`;
-}
-
-function calculateNumerologyCompatibility(date1, date2) {
-    // Simplified numerology calculation
-    const sum1 = date1.split('-').join('').split('').reduce((a, b) => a + parseInt(b), 0);
-    const sum2 = date2.split('-').join('').split('').reduce((a, b) => a + parseInt(b), 0);
-
-    // Calculate compatibility as a percentage
-    const compatibility = (sum1 + sum2) % 100;
-    return compatibility;
-}
+        // Here you would put your logic for calculating compatibility
+        // For demonstration purposes, we'll just say they're compatible.
+        var resultText = 'Congratulations, ' + yourName + ' and ' + partnerName + '! You are compatible.';
+        
+        document.getElementById('result').innerText = resultText;
+    });
+});
